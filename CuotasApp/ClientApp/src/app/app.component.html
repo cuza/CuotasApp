@@ -1,0 +1,73 @@
+<div class="form-container container">
+  <div class="row justify-content-md-center">
+  <mat-card class="card col col-md-4" *ngIf="showLogin">
+    <mat-card-title class="title">Datos de su cuenta:</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content class="content">
+      <form #logginForm = "ngForm">
+        <mat-form-field class="input">
+          <input matInput placeholder="Usuario" id="user"
+            required [(ngModel)]="user.username" name="user">    
+        </mat-form-field>
+        <mat-form-field class="input">
+          <input matInput type="password" placeholder="Contraseña"
+            [type]="hide ? 'password' : 'text'" id="password"
+            required [(ngModel)]="user.password" name="password"
+            (keyup.enter)="getData()">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <button [disabled]="!logginForm.form.valid" mat-raised-button color="primary" class="down-buttons"
+      (click)="getData()" >MOSTRAR</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <div class="container" *ngIf="showData">
+    <div class="row justify-content-center">
+        <mat-card class="card col col-md-4">
+            <mat-card-title class="title">Información de Cuota:</mat-card-title>
+            <mat-card-subtitle class="title">{{user.username}}</mat-card-subtitle>
+            <mat-divider></mat-divider>
+            <mat-card-content class="content">
+              <p class="progress-label">Consumo Mes Actual</p>
+              <mat-progress-bar class="progress-bar" mode="determinate" [color]="color" value={{porcent}} ></mat-progress-bar> 
+              <p *ngIf="compare()" class="red-text">Cuota exedida</p>
+              <h2><span [ngClass]="compare() ? 't-red' : 't-green'">{{user.usage}}</span>/{{user.max}}(Mb)    {{porcent}}%</h2>
+              <hr>
+              <h3>Hace 24hr: {{user.today}}(Mb)</h3>
+              <h3>Esta Semana: {{user.last_week}}(Mb)</h3>
+              <h3>Este Año: {{user.year}}</h3>
+              
+            </mat-card-content>
+            <mat-card-footer class="back-button">
+              <button  mat-button color="primary" (click)="backClick()">Atras</button>
+            </mat-card-footer>
+        </mat-card>
+        <mat-card class="card col col-md-4">
+            <mat-card-title class="title">Tiempo Online:</mat-card-title>
+            <mat-card-subtitle class="title">(-) significa sin consumo</mat-card-subtitle>
+            <mat-divider></mat-divider>
+            <mat-card-content class="content">
+                <h2>24hr: {{user.online_time_24}}</h2>
+                <h2>Mes: {{user.online_time_month}}</h2>
+                <h2>Año: {{user.online_time_year}}</h2>
+              </mat-card-content>
+        </mat-card>
+    </div>
+  </div>
+  
+</div>
+</div>
+<div class="logo">
+    <img height="70" width="83" src="../assets/logo-dgiu.png" alt="Logotipo DGIU">
+  </div>
+<mat-toolbar class="footer title-center">
+  <span class="title-center">Universidad de Matanzas, DGIU</span>
+</mat-toolbar>
+
+
+
+
+

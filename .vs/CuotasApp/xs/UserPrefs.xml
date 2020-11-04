@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{C09033B7-6217-440C-A3E1-DDB012D8CFCF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CuotasApp/Startup.cs">
+    <Files>
+      <File FileName="Dockerfile" Line="12" Column="9" />
+      <File FileName="CuotasApp/Startup.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CuotasApp" expanded="True">
+            <Node name="CuotasApp" expanded="True">
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,93 @@
+.card {
+    /* width: 300px; */
+    height: auto;
+    padding: 37px;
+}
+
+ /* @media (max-width:320px) {
+    .card {
+      max-width: device-width;
+    }
+
+    body {
+        width: 100%;
+    }
+  }  */
+  
+
+.form-container {
+    height: 100%;
+    margin-top: 100px;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+
+.title {
+    text-align: -webkit-auto;
+    text-align: start;
+}
+
+.content {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.input {
+    width: 100%;
+}
+
+.down-buttons {
+    width: 100%;
+}
+
+.progress-bar {
+    padding-top: 5px;
+    height: 40px;
+}
+
+h2, h3 {
+    color: darkgrey;
+}
+
+.back-button {
+    text-align: left;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #164e90;
+    color: white;
+    box-shadow: 0 0 2px 2px rgba(0,.24,0,0), 0 0 0 2px rgba(0,.12,0,0);
+}
+
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.logo {
+    padding-top: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.red-text {
+    margin-top: 1px;
+    color: #f44336;
+}
+
+.t-red {
+    color: #f44336;
+}
+
+.t-green {
+    color: #35ce47;
+}
+
+.progress-label {
+    margin: 0;
+}
